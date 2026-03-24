@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>София & Никита | 1 августа 2026</title>
+  <meta name="description" content="Свадебное приглашение Софии и Никиты. 1 августа 2026 года." />
+  <meta name="theme-color" content="#1a1510" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <div class="loader__ring"></div>
+      <div class="loader__ring loader__ring--2"></div>
+      <div class="loader__monogram">С<span>&</span>Н</div>
+      <p class="loader__text">Открываем приглашение…</p>
+    </div>
+  </div>
+
+  <!-- MAGIC CURSOR GLOW (desktop) -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- FLOATING MUSIC BUTTON -->
+  <button class="music-btn" id="musicToggle" aria-label="Музыка">
+    <div class="music-btn__waves">
+      <span></span><span></span><span></span>
+    </div>
+    <i class="fas fa-music"></i>
+  </button>
+
+  <!-- ═══════════════════════════════════
+       HERO — FULL IMMERSIVE
+  ═══════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas" id="heroCanvas"></canvas>
+
+    <!-- Ornamental frame corners -->
+    <div class="hero__frame">
+      <svg class="hero__frame-corner hero__frame-corner--tl" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,0 L0,80 Q0,0 80,0" stroke="url(#goldGrad)" stroke-width="1.5" fill="none"/>
+        <path d="M0,0 L0,50 Q0,0 50,0" stroke="url(#goldGrad)" stroke-width="1" fill="none" opacity="0.5"/>
+        <circle cx="12" cy="12" r="3" fill="#C9B037" opacity="0.6"/>
+        <!-- Leaf -->
+        <path d="M20,80 Q40,50 80,20" stroke="#9CAF88" stroke-width="1" fill="none" opacity="0.4"/>
+        <path d="M30,75 Q45,55 70,35 Q50,60 30,75Z" fill="#9CAF88" opacity="0.15"/>
+        <path d="M50,55 Q58,42 75,25 Q62,45 50,55Z" fill="#D4A5A5" opacity="0.15"/>
+        <circle cx="80" cy="20" r="3" fill="#D4A5A5" opacity="0.3"/>
+        <circle cx="50" cy="50" r="2" fill="#C9B037" opacity="0.3"/>
+        <defs><linearGradient id="goldGrad" x1="0" y1="0" x2="100" y2="100"><stop offset="0%" stop-color="#E8D070"/><stop offset="100%" stop-color="#C9B037"/></linearGradient></defs>
+      </svg>
+      <svg class="hero__frame-corner hero__frame-corner--tr" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M200,0 L200,80 Q200,0 120,0" stroke="#C9B037" stroke-width="1.5" fill="none"/>
+        <path d="M200,0 L200,50 Q200,0 150,0" stroke="#C9B037" stroke-width="1" fill="none" opacity="0.5"/>
+        <circle cx="188" cy="12" r="3" fill="#C9B037" opacity="0.6"/>
+        <path d="M180,80 Q160,50 120,20" stroke="#9CAF88" stroke-width="1" fill="none" opacity="0.4"/>
+        <path d="M170,75 Q155,55 130,35 Q150,60 170,75Z" fill="#9CAF88" opacity="0.15"/>
+        <circle cx="120" cy="20" r="3" fill="#D4A5A5" opacity="0.3"/>
+      </svg>
+      <svg class="hero__frame-corner hero__frame-corner--bl" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,200 L0,120 Q0,200 80,200" stroke="#C9B037" stroke-width="1.5" fill="none"/>
+        <path d="M0,200 L0,150 Q0,200 50,200" stroke="#C9B037" stroke-width="1" fill="none" opacity="0.5"/>
+        <circle cx="12" cy="188" r="3" fill="#C9B037" opacity="0.6"/>
+        <path d="M20,120 Q40,150 80,180" stroke="#9CAF88" stroke-width="1" fill="none" opacity="0.4"/>
+        <path d="M30,125 Q45,145 70,165 Q50,140 30,125Z" fill="#D4A5A5" opacity="0.15"/>
+      </svg>
+      <svg class="hero__frame-corner hero__frame-corner--br" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M200,200 L200,120 Q200,200 120,200" stroke="#C9B037" stroke-width="1.5" fill="none"/>
+        <path d="M200,200 L200,150 Q200,200 150,200" stroke="#C9B037" stroke-width="1" fill="none" opacity="0.5"/>
+        <circle cx="188" cy="188" r="3" fill="#C9B037" opacity="0.6"/>
+        <path d="M180,120 Q160,150 120,180" stroke="#9CAF88" stroke-width="1" fill="none" opacity="0.4"/>
+        <path d="M170,125 Q155,145 130,165 Q150,140 170,125Z" fill="#9CAF88" opacity="0.15"/>
+      </svg>
+    </div>
+
+    <div class="hero__content" id="heroContent">
+      <div class="hero__overline anim-item">
+        <span class="hero__line-deco"></span>
+        <span>Вы приглашены на свадьбу</span>
+        <span class="hero__line-deco"></span>
+      </div>
+
+      <h1 class="hero__title anim-item">
+        <span class="hero__name hero__name--first" data-text="София">София</span>
+        <span class="hero__amp">
+          <svg viewBox="0 0 60 50" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M30,8 C30,3 24,-2 18,2 C12,6 12,14 18,20 L30,32 L42,20 C48,14 48,6 42,2 C36,-2 30,3 30,8Z" fill="none" stroke="#C9B037" stroke-width="1.5" opacity="0.8"/>
+            <path d="M30,12 C30,8 26,4 22,7 C18,10 18,15 22,19 L30,27 L38,19 C42,15 42,10 38,7 C34,4 30,8 30,12Z" fill="#C9B037" opacity="0.25"/>
+          </svg>
+        </span>
+        <span class="hero__name hero__name--second" data-text="Никита">Никита</span>
+      </h1>
+
+      <div class="hero__ornament anim-item">
+        <svg viewBox="0 0 400 40" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <line x1="0" y1="20" x2="140" y2="20" stroke="url(#lineGrad)" stroke-width="1"/>
+          <!-- Center flower -->
+          <g transform="translate(200,20)">
+            <circle cx="0" cy="0" r="6" fill="#C9B037" opacity="0.7"/>
+            <circle cx="0" cy="0" r="3" fill="#E8D070" opacity="0.9"/>
+            <ellipse cx="0" cy="-12" rx="4" ry="8" fill="#D4A5A5" opacity="0.4" transform="rotate(0)"/>
+            <ellipse cx="0" cy="-12" rx="4" ry="8" fill="#D4A5A5" opacity="0.4" transform="rotate(72)"/>
+            <ellipse cx="0" cy="-12" rx="4" ry="8" fill="#D4A5A5" opacity="0.4" transform="rotate(144)"/>
+            <ellipse cx="0" cy="-12" rx="4" ry="8" fill="#D4A5A5" opacity="0.4" transform="rotate(216)"/>
+            <ellipse cx="0" cy="-12" rx="4" ry="8" fill="#D4A5A5" opacity="0.4" transform="rotate(288)"/>
+          </g>
+          <line x1="260" y1="20" x2="400" y2="20" stroke="url(#lineGrad2)" stroke-width="1"/>
+          <!-- Small leaves -->
+          <path d="M145,20 Q155,10 165,20 Q155,30 145,20Z" fill="#9CAF88" opacity="0.35"/>
+          <path d="M235,20 Q245,10 255,20 Q245,30 235,20Z" fill="#9CAF88" opacity="0.35"/>
+          <defs>
+            <linearGradient id="lineGrad" x1="0" y1="0" x2="140" y2="0"><stop offset="0%" stop-color="#C9B037" stop-opacity="0"/><stop offset="100%" stop-color="#C9B037" stop-opacity="0.8"/></linearGradient>
+            <linearGradient id="lineGrad2" x1="260" y1="0" x2="400" y2="0"><stop offset="0%" stop-color="#C9B037" stop-opacity="0.8"/><stop offset="100%" stop-color="#C9B037" stop-opacity="0"/></linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="hero__date anim-item">
+        <span class="hero__date-num">01</span>
+        <span class="hero__date-dot">•</span>
+        <span class="hero__date-month">августа</span>
+        <span class="hero__date-dot">•</span>
+        <span class="hero__date-num">2026</span>
+      </div>
+
+      <p class="hero__weekday anim-item">Суббота</p>
+    </div>
+
+    <a href="#about" class="hero__scroll" id="heroScroll">
+      <span class="hero__scroll-line"></span>
+      <span class="hero__scroll-text">Листайте</span>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       ABOUT — LOVE STORY
+  ═══════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="about__bg-flora">
+      <div class="flora flora--1"></div>
+      <div class="flora flora--2"></div>
+      <div class="flora flora--3"></div>
+    </div>
+
+    <div class="container">
+      <div class="about__inner">
+        <div class="about__icon reveal">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <circle cx="50" cy="50" r="45" stroke="#C9B037" stroke-width="0.8" opacity="0.3"/>
+            <circle cx="50" cy="50" r="35" stroke="#D4A5A5" stroke-width="0.5" opacity="0.3"/>
+            <!-- Infinity / Rings -->
+            <ellipse cx="32" cy="50" rx="20" ry="20" stroke="#C9B037" stroke-width="2" opacity="0.7"/>
+            <ellipse cx="68" cy="50" rx="20" ry="20" stroke="#C9B037" stroke-width="2" opacity="0.7"/>
+            <circle cx="50" cy="38" r="2.5" fill="#D4A5A5" opacity="0.6"/>
+            <circle cx="50" cy="62" r="2.5" fill="#D4A5A5" opacity="0.6"/>
+          </svg>
+        </div>
+
+        <h2 class="about__title reveal">
+          <span class="about__title-script">Наша история</span>
+        </h2>
+
+        <div class="about__divider reveal">
+          <svg viewBox="0 0 200 16" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="8" x2="80" y2="8" stroke="#C9B037" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="100" cy="8" r="3" fill="#C9B037" opacity="0.6"/>
+            <line x1="120" y1="8" x2="200" y2="8" stroke="#C9B037" stroke-width="0.8" opacity="0.5"/>
+          </svg>
+        </div>
+
+        <div class="about__quote reveal">
+          <div class="about__quote-mark about__quote-mark--open">"</div>
+          <p class="about__text">
+            Мы встретились случайно и&nbsp;поняли&nbsp;— это судьба.
+          </p>
+          <p class="about__text">
+            С&nbsp;того самого дня мы&nbsp;решили, что&nbsp;будем вместе навсегда.
+            Каждый момент рядом&nbsp;— это&nbsp;счастье.
+          </p>
+          <p class="about__text about__text--glow">
+            Будем безмерно рады разделить<br>этот счастливый день с&nbsp;вами!
+          </p>
+          <div class="about__quote-mark about__quote-mark--close">"</div>
+        </div>
+
+        <div class="about__couple reveal">
+          <div class="about__name-block">
+            <span class="about__name-script">София</span>
+            <span class="about__name-role">невеста</span>
+          </div>
+          <div class="about__heart-wrap">
+            <div class="about__heart-pulse"></div>
+            <div class="about__heart-icon">♥</div>
+          </div>
+          <div class="about__name-block">
+            <span class="about__name-script">Никита</span>
+            <span class="about__name-role">жених</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       COUNTDOWN — CINEMATIC
+  ═══════════════════════════════════ -->
+  <section class="countdown" id="countdown">
+    <div class="countdown__parallax-bg" id="countdownBg"></div>
+    <canvas class="countdown__particles" id="countdownParticles"></canvas>
+
+    <div class="container">
+      <div class="countdown__top reveal">
+        <p class="countdown__label-top">До нашего счастливого дня</p>
+        <h2 class="countdown__heading">Осталось</h2>
+      </div>
+
+      <div class="countdown__grid reveal">
+        <div class="countdown__card">
+          <div class="countdown__card-glow"></div>
+          <div class="countdown__value" id="days">000</div>
+          <div class="countdown__unit">дней</div>
+        </div>
+        <div class="countdown__separator">:</div>
+        <div class="countdown__card">
+          <div class="countdown__card-glow"></div>
+          <div class="countdown__value" id="hours">00</div>
+          <div class="countdown__unit">часов</div>
+        </div>
+        <div class="countdown__separator">:</div>
+        <div class="countdown__card">
+          <div class="countdown__card-glow"></div>
+          <div class="countdown__value" id="minutes">00</div>
+          <div class="countdown__unit">минут</div>
+        </div>
+        <div class="countdown__separator">:</div>
+        <div class="countdown__card">
+          <div class="countdown__card-glow"></div>
+          <div class="countdown__value countdown__value--accent" id="seconds">00</div>
+          <div class="countdown__unit">секунд</div>
+        </div>
+      </div>
+
+      <p class="countdown__date reveal">1 августа 2026 • Суббота • 15:00</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       SAVE THE DATE — FINAL CTA
+  ═══════════════════════════════════ -->
+  <section class="savedate" id="savedate">
+    <canvas class="savedate__canvas" id="savedateCanvas"></canvas>
+    <div class="container">
+      <div class="savedate__inner reveal">
+        <p class="savedate__pre">Сохраните дату</p>
+        <div class="savedate__date">
+          <span class="savedate__day">1</span>
+          <div class="savedate__meta">
+            <span class="savedate__month">Августа</span>
+            <span class="savedate__year">2026</span>
+          </div>
+        </div>
+        <div class="savedate__ornament">
+          <svg viewBox="0 0 300 20" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="10" x2="120" y2="10" stroke="#C9B037" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="150" cy="10" r="3.5" fill="#C9B037" opacity="0.7"/>
+            <line x1="180" y1="10" x2="300" y2="10" stroke="#C9B037" stroke-width="0.8" opacity="0.5"/>
+          </svg>
+        </div>
+        <p class="savedate__text">Мы ждём именно вас на&nbsp;нашем празднике любви</p>
+        <p class="savedate__hashtag">#СофияИНикита2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__glow"></div>
+    <div class="footer__inner">
+      <div class="footer__monogram">С&amp;Н</div>
+      <p class="footer__love">С любовью, <span>София &amp; Никита</span> ♥</p>
+      <p class="footer__date">01 . 08 . 2026</p>
+      <div class="footer__divider">
+        <svg viewBox="0 0 200 12" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="6" x2="80" y2="6" stroke="#C9B037" stroke-width="0.6" opacity="0.4"/>
+          <circle cx="100" cy="6" r="2.5" fill="#C9B037" opacity="0.5"/>
+          <line x1="120" y1="6" x2="200" y2="6" stroke="#C9B037" stroke-width="0.6" opacity="0.4"/>
+        </svg>
+      </div>
+      <p class="footer__copy">Создано с любовью для нашего особенного дня</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
